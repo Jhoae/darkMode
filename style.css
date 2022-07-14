@@ -1,0 +1,167 @@
+@import "reset.css";
+@import "main.js";
+
+body {
+  background-color: black;
+  height: 1000vh;
+}
+
+i {
+  color: white;
+}
+
+.navbar__top {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /**/
+  background-color: black;
+  box-sizing: border-box;
+  width: 100%;
+  /**/
+  border-bottom: 1px solid white;
+
+  /**/
+  color: white;
+  font-size: 2em;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5% 5%;
+}
+
+.navbar__top__icons {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+/* .navbar__top__icons > div {
+  font-size: 10px;
+  padding: none;
+} */
+
+.navbar__bottom {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  /**/
+  background-color: black;
+  box-sizing: border-box;
+  width: 100%;
+  /**/
+  border-top: 1px solid white;
+
+  /**/
+  color: white;
+  font-size: 2em;
+}
+
+.navbar__bottom > ul {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 5% 5%;
+}
+
+/*
+다크모드 토글버튼 
+
+.toggle__darkBtn {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.toggle__darkBtn > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.silder {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a1a08f;
+    transition: 0.4s;
+}
+
+.silder::before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    
+    transition: 0.4s;
+}
+
+.toggle__darkBtn > input:checked + .silder {
+    background-color: #524a4a;
+}
+.toggle__darkBtn > input:focus + .silder {
+    box-shadow: 0 0 1px #524a4a;
+}
+.toggle__darkBtn > input:checked + .silder::before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+.silder,
+.round::before {
+    border-radius: 10px;
+}
+*/
+.toggleSwitch {
+  width: 3.5rem;
+  height: 2rem;
+  display: block;
+  position: relative;
+  border-radius: 2rem;
+  /**/
+  background-color: #fff;
+  box-shadow: 0 0 1rem 3px rgba(0 0 0 / 15%);
+  cursor: pointer;
+}
+
+/* 토글 버튼 */
+.toggleSwitch .toggleButton {
+  /* 버튼은 토글보다 작아야함  */
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #524a4a;
+}
+/* 체크박스가 체크될 시 변경되는 요소 */
+
+.toggleSwitch.active {
+  background: #524a4a;
+}
+.toggleSwitch.active .toggleButton {
+  /* 100% -> 끝위치, 2.8rem -> 버튼 크기 */
+  left: calc(100% - 1.8rem);
+  background: #fff;
+}
+
+.toggleSwitch,
+.toggleButton {
+  transition: all 0.2s ease-in;
+}
+
+.toggleSwitch {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+}
